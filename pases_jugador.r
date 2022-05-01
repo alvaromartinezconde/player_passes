@@ -6,8 +6,7 @@ library(ggforce)
 library(ggExtra)
 
 # Fijar directorio de trabajo
-# Cambiar el directorio de trabajo donde hemos guardado el archivo
-# full_data.txt, sustituyendo ... por la ruta correspondiente
+
 setwd("C:/Users/mcond/OneDrive/Escritorio")
 
 
@@ -22,9 +21,6 @@ full_data %>%
   filter(Suceso == "Pass" & Jugador == "Busquets")
 
 
-# -------------
-# Proceso
-# -------------
 # Elegir jugador a analizar
 jugador_elegido <- c("Busquets")
 # Elegir rival
@@ -38,9 +34,6 @@ data_player <- subset(full_data, Jugador == jugador_elegido &
                         Local == partido_elegido & 
                         Suceso == evento_elegido)
 
-# Postproceso
-
-# -------------
 # Crear campo de fútbol con distribución de puntos correspondientes 
 # a la posición (x,y) de cada evento
 player_scatter_plot <- ggplot() +
